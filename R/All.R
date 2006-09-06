@@ -56,6 +56,8 @@ renameSdf <- function(sdf, name) {
 }
 inameSdf <- function(sdf) .Call("sdf_get_iname", sdf)
 
+is.sqlite.data.frame <- function(x) inherits(x, "sqlite.data.frame")
+
 # -------------------------------------------------------------------------
 # sqlite.matrix functions
 # -------------------------------------------------------------------------
@@ -153,6 +155,12 @@ sdfImportText <- function(file, iname=NULL, sep="", quote="\"'", dec=".", as.is=
     sdf
 }
 
+sdfSelect <- function(sdf, select=NULL, where=NULL, limit=NULL, debug=FALSE) {
+    if (!is.sqlite.data.frame(sdf)) stop("sdf must be an sqlite.data.frame")
+    if (!is.null(limit)) limit = as.character(limit)
+    .Call("sdf_select", sdf, select, where, limit, debug)
+}
+    
 
 # -------------------------------------------------------------------------
 # overriden primitives

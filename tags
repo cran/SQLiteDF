@@ -1,0 +1,300 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+ALL	src/sqlite_vector.c	1273;"	d	file:
+ANY	src/sqlite_vector.c	1274;"	d	file:
+CHAR_ELT	src/sqlite_dataframe.h	109;"	d
+CallEntries	src/init.c	/^static const R_CallMethodDef CallEntries[] = {$/;"	v	file:
+EQUAL_ZERO	src/sqlite_biglm.c	6;"	d	file:
+FACTORSXP	src/sqlite_dataframe.h	126;"	d
+GET_SDFROWNAMES	src/sqlite_dataframe.h	32;"	d
+GET_SDFVECTORTYPE	src/sqlite_dataframe.h	29;"	d
+LOGBASE	src/sqlite_vector.c	1239;"	d	file:
+MAX	src/sqlite_vector.c	1272;"	d	file:
+MAX_ATTACHED	src/sqlite_dataframe.h	40;"	d
+MIN	src/sqlite_vector.c	1271;"	d	file:
+NBUFS	src/sqlite_dataframe.h	10;"	d
+NOPUSH_MASK_0	src/win/opcodes.h	152;"	d
+NOPUSH_MASK_1	src/win/opcodes.h	153;"	d
+NOPUSH_MASK_2	src/win/opcodes.h	154;"	d
+NOPUSH_MASK_3	src/win/opcodes.h	155;"	d
+NOPUSH_MASK_4	src/win/opcodes.h	156;"	d
+NOPUSH_MASK_5	src/win/opcodes.h	157;"	d
+NOPUSH_MASK_6	src/win/opcodes.h	158;"	d
+NOPUSH_MASK_7	src/win/opcodes.h	159;"	d
+NOPUSH_MASK_8	src/win/opcodes.h	160;"	d
+NOPUSH_MASK_9	src/win/opcodes.h	161;"	d
+OP_AbsValue	src/win/opcodes.h	124;"	d
+OP_Add	src/win/opcodes.h	129;"	d
+OP_AddImm	src/win/opcodes.h	76;"	d
+OP_AggFinal	src/win/opcodes.h	119;"	d
+OP_AggStep	src/win/opcodes.h	113;"	d
+OP_And	src/win/opcodes.h	33;"	d
+OP_AutoCommit	src/win/opcodes.h	70;"	d
+OP_BitAnd	src/win/opcodes.h	8;"	d
+OP_BitNot	src/win/opcodes.h	34;"	d
+OP_BitOr	src/win/opcodes.h	97;"	d
+OP_Blob	src/win/opcodes.h	80;"	d
+OP_Callback	src/win/opcodes.h	75;"	d
+OP_Clear	src/win/opcodes.h	112;"	d
+OP_Close	src/win/opcodes.h	99;"	d
+OP_CollSeq	src/win/opcodes.h	43;"	d
+OP_Column	src/win/opcodes.h	92;"	d
+OP_Concat	src/win/opcodes.h	78;"	d
+OP_ContextPop	src/win/opcodes.h	44;"	d
+OP_ContextPush	src/win/opcodes.h	27;"	d
+OP_CreateIndex	src/win/opcodes.h	55;"	d
+OP_CreateTable	src/win/opcodes.h	132;"	d
+OP_Delete	src/win/opcodes.h	108;"	d
+OP_Destroy	src/win/opcodes.h	53;"	d
+OP_Distinct	src/win/opcodes.h	54;"	d
+OP_Divide	src/win/opcodes.h	106;"	d
+OP_DropIndex	src/win/opcodes.h	88;"	d
+OP_DropTable	src/win/opcodes.h	25;"	d
+OP_DropTrigger	src/win/opcodes.h	9;"	d
+OP_Dup	src/win/opcodes.h	4;"	d
+OP_Eq	src/win/opcodes.h	48;"	d
+OP_Expire	src/win/opcodes.h	86;"	d
+OP_Explain	src/win/opcodes.h	114;"	d
+OP_FifoRead	src/win/opcodes.h	91;"	d
+OP_FifoWrite	src/win/opcodes.h	72;"	d
+OP_ForceInt	src/win/opcodes.h	83;"	d
+OP_Found	src/win/opcodes.h	64;"	d
+OP_Function	src/win/opcodes.h	77;"	d
+OP_Ge	src/win/opcodes.h	39;"	d
+OP_Gosub	src/win/opcodes.h	94;"	d
+OP_Goto	src/win/opcodes.h	61;"	d
+OP_Gt	src/win/opcodes.h	58;"	d
+OP_Halt	src/win/opcodes.h	85;"	d
+OP_HexBlob	src/win/opcodes.h	40;"	d
+OP_IdxDelete	src/win/opcodes.h	62;"	d
+OP_IdxGE	src/win/opcodes.h	134;"	d
+OP_IdxGT	src/win/opcodes.h	15;"	d
+OP_IdxInsert	src/win/opcodes.h	89;"	d
+OP_IdxIsNull	src/win/opcodes.h	28;"	d
+OP_IdxLT	src/win/opcodes.h	107;"	d
+OP_IdxRowid	src/win/opcodes.h	136;"	d
+OP_If	src/win/opcodes.h	50;"	d
+OP_IfMemNeg	src/win/opcodes.h	95;"	d
+OP_IfMemPos	src/win/opcodes.h	102;"	d
+OP_IfMemZero	src/win/opcodes.h	66;"	d
+OP_IfNot	src/win/opcodes.h	51;"	d
+OP_Insert	src/win/opcodes.h	133;"	d
+OP_Int64	src/win/opcodes.h	93;"	d
+OP_Integer	src/win/opcodes.h	104;"	d
+OP_IntegrityCk	src/win/opcodes.h	12;"	d
+OP_IsNull	src/win/opcodes.h	81;"	d
+OP_IsUnique	src/win/opcodes.h	117;"	d
+OP_Last	src/win/opcodes.h	16;"	d
+OP_Le	src/win/opcodes.h	122;"	d
+OP_LoadAnalysis	src/win/opcodes.h	14;"	d
+OP_Lt	src/win/opcodes.h	141;"	d
+OP_MakeIdxRec	src/win/opcodes.h	60;"	d
+OP_MakeRecord	src/win/opcodes.h	128;"	d
+OP_MemIncr	src/win/opcodes.h	46;"	d
+OP_MemInt	src/win/opcodes.h	11;"	d
+OP_MemLoad	src/win/opcodes.h	18;"	d
+OP_MemMax	src/win/opcodes.h	98;"	d
+OP_MemMove	src/win/opcodes.h	63;"	d
+OP_MemNull	src/win/opcodes.h	69;"	d
+OP_MemStore	src/win/opcodes.h	26;"	d
+OP_MoveGe	src/win/opcodes.h	47;"	d
+OP_MoveGt	src/win/opcodes.h	65;"	d
+OP_MoveLe	src/win/opcodes.h	127;"	d
+OP_MoveLt	src/win/opcodes.h	5;"	d
+OP_Multiply	src/win/opcodes.h	6;"	d
+OP_MustBeInt	src/win/opcodes.h	67;"	d
+OP_Ne	src/win/opcodes.h	130;"	d
+OP_Negative	src/win/opcodes.h	121;"	d
+OP_NewRowid	src/win/opcodes.h	79;"	d
+OP_Next	src/win/opcodes.h	82;"	d
+OP_Noop	src/win/opcodes.h	37;"	d
+OP_Not	src/win/opcodes.h	57;"	d
+OP_NotExists	src/win/opcodes.h	3;"	d
+OP_NotFound	src/win/opcodes.h	126;"	d
+OP_NotNull	src/win/opcodes.h	29;"	d
+OP_NotUsed_136	src/win/opcodes.h	145;"	d
+OP_NotUsed_137	src/win/opcodes.h	146;"	d
+OP_NotUsed_138	src/win/opcodes.h	147;"	d
+OP_Null	src/win/opcodes.h	103;"	d
+OP_NullRow	src/win/opcodes.h	36;"	d
+OP_OpenEphemeral	src/win/opcodes.h	140;"	d
+OP_OpenPseudo	src/win/opcodes.h	10;"	d
+OP_OpenRead	src/win/opcodes.h	135;"	d
+OP_OpenWrite	src/win/opcodes.h	120;"	d
+OP_Or	src/win/opcodes.h	87;"	d
+OP_ParseSchema	src/win/opcodes.h	41;"	d
+OP_Pop	src/win/opcodes.h	142;"	d
+OP_Prev	src/win/opcodes.h	68;"	d
+OP_Pull	src/win/opcodes.h	22;"	d
+OP_Push	src/win/opcodes.h	110;"	d
+OP_ReadCookie	src/win/opcodes.h	84;"	d
+OP_Real	src/win/opcodes.h	31;"	d
+OP_RealAffinity	src/win/opcodes.h	111;"	d
+OP_Remainder	src/win/opcodes.h	19;"	d
+OP_ResetCount	src/win/opcodes.h	59;"	d
+OP_Return	src/win/opcodes.h	74;"	d
+OP_Rewind	src/win/opcodes.h	109;"	d
+OP_RowData	src/win/opcodes.h	96;"	d
+OP_RowKey	src/win/opcodes.h	13;"	d
+OP_Rowid	src/win/opcodes.h	30;"	d
+OP_Sequence	src/win/opcodes.h	21;"	d
+OP_SetCookie	src/win/opcodes.h	20;"	d
+OP_SetNumColumns	src/win/opcodes.h	56;"	d
+OP_ShiftLeft	src/win/opcodes.h	90;"	d
+OP_ShiftRight	src/win/opcodes.h	52;"	d
+OP_Sort	src/win/opcodes.h	125;"	d
+OP_Statement	src/win/opcodes.h	42;"	d
+OP_String	src/win/opcodes.h	71;"	d
+OP_String8	src/win/opcodes.h	32;"	d
+OP_Subtract	src/win/opcodes.h	17;"	d
+OP_TableLock	src/win/opcodes.h	139;"	d
+OP_ToBlob	src/win/opcodes.h	137;"	d
+OP_ToInt	src/win/opcodes.h	73;"	d
+OP_ToNumeric	src/win/opcodes.h	49;"	d
+OP_ToReal	src/win/opcodes.h	100;"	d
+OP_ToText	src/win/opcodes.h	45;"	d
+OP_Transaction	src/win/opcodes.h	105;"	d
+OP_VBegin	src/win/opcodes.h	138;"	d
+OP_VColumn	src/win/opcodes.h	24;"	d
+OP_VCreate	src/win/opcodes.h	7;"	d
+OP_VDestroy	src/win/opcodes.h	116;"	d
+OP_VFilter	src/win/opcodes.h	35;"	d
+OP_VNext	src/win/opcodes.h	123;"	d
+OP_VOpen	src/win/opcodes.h	118;"	d
+OP_VRowid	src/win/opcodes.h	38;"	d
+OP_VUpdate	src/win/opcodes.h	23;"	d
+OP_Vacuum	src/win/opcodes.h	115;"	d
+OP_Variable	src/win/opcodes.h	131;"	d
+OP_VerifyCookie	src/win/opcodes.h	101;"	d
+ORDEREDSXP	src/sqlite_dataframe.h	127;"	d
+PROD	src/sqlite_vector.c	1270;"	d	file:
+R_init_SQLiteDF	src/init.c	/^void R_init_SQLiteDF(DllInfo *dll) {$/;"	f
+SDF_DETAIL_EXISTS	src/sqlite_dataframe.h	122;"	d
+SDF_DETAIL_FULLFILENAME	src/sqlite_dataframe.h	123;"	d
+SDF_DimNamesSymbol	src/sqlite_dataframe.h	/^SEXP SDF_DimNamesSymbol;$/;"	v
+SDF_DimSymbol	src/sqlite_dataframe.h	/^SEXP SDF_DimSymbol;$/;"	v
+SDF_INAME	src/sqlite_dataframe.h	112;"	d
+SDF_RowNamesSymbol	src/sqlite_dataframe.h	/^SEXP SDF_RowNamesSymbol;$/;"	v
+SDF_VectorTypeSymbol	src/sqlite_dataframe.h	/^SEXP SDF_VectorTypeSymbol;$/;"	v
+SET_ROWNAMES	src/sqlite_dataframe.h	36;"	d
+SET_SDFROWNAMES	src/sqlite_dataframe.h	33;"	d
+SET_SDFVECTORTYPE	src/sqlite_dataframe.h	30;"	d
+SQLITE_MATH_FUNC1	src/sqlite_vector.c	1212;"	d	file:
+SQLITE_MATH_FUNC2	src/sqlite_vector.c	1220;"	d	file:
+SQLITE_MATH_FUNC_CUM	src/sqlite_vector.c	1229;"	d	file:
+SQLITE_SUMMARY_FUNC	src/sqlite_vector.c	1281;"	d	file:
+SUM	src/sqlite_vector.c	1269;"	d	file:
+SVEC_TBLNAME	src/sqlite_dataframe.h	113;"	d
+SVEC_VARNAME	src/sqlite_dataframe.h	114;"	d
+TEST_SDFVECTORTYPE	src/sqlite_dataframe.h	31;"	d
+TOL	src/sqlite_biglm.c	4;"	d	file:
+UNUSE_SDF2	src/sqlite_workspace.c	/^int UNUSE_SDF2(const char *iname) {$/;"	f
+USE_SDF1	src/sqlite_workspace.c	/^int USE_SDF1(const char *iname, int exists, int protect) {$/;"	f
+VAR_FACTOR	src/sqlite_dataframe.h	118;"	d
+VAR_INTEGER	src/sqlite_dataframe.h	117;"	d
+VAR_ORDERED	src/sqlite_dataframe.h	119;"	d
+VMENTRY1	src/sqlite_vector.c	1370;"	d	file:
+VSENTRY1	src/sqlite_vector.c	1371;"	d	file:
+WORKSPACE_COLUMNS	src/sqlite_dataframe.h	39;"	d
+ZERO	src/sqlite_biglm.c	5;"	d	file:
+__SQLITE_DATAFRAME__	src/sqlite_dataframe.h	7;"	d
+__SQLITE_MATRIX__	src/sqlite_matrix.c	1;"	d	file:
+__SQLITE_WORKSPACE__	src/sqlite_workspace.c	4;"	d	file:
+__UTIL__	src/utils.c	9;"	d	file:
+__attach_levels2	src/utils.c	/^static void __attach_levels2(char *table, SEXP var, int len) {$/;"	f	file:
+__include	src/sqlite_biglm.c	/^static void __include(int np, int nrbar, double *D, double *rbar, double *thetab, $/;"	f	file:
+__r_intdiv	src/sqlite_vector.c	/^static void __r_intdiv(sqlite3_context *ctx, int argc, sqlite3_value **argv) {$/;"	f	file:
+__r_modulo	src/sqlite_vector.c	/^static void __r_modulo(sqlite3_context *ctx, int argc, sqlite3_value **argv) {$/;"	f	file:
+__register_vector_math	src/sqlite_vector.c	/^void __register_vector_math() {$/;"	f
+__vecmath_checkarg	src/sqlite_vector.c	/^R_INLINE int __vecmath_checkarg(sqlite3_context *ctx, sqlite3_value *arg, double *value) {$/;"	f
+__vecsummary_finalize	src/sqlite_vector.c	/^static void __vecsummary_finalize(sqlite3_context *ctx) {$/;"	f	file:
+_add_row_to_df	src/sqlite_dataframe.c	/^static int _add_row_to_df(SEXP df, sqlite3_stmt *stmt, int row, int ncols) {$/;"	f	file:
+_add_sdf1	src/sqlite_workspace.c	/^int _add_sdf1(char *filename, char *internal_name) {$/;"	f
+_check_sdf_name	src/sqlite_dataframe.c	/^static int _check_sdf_name(SEXP name, char **rname, char **iname, int *file_idx) {$/;"	f	file:
+_check_sql_buf	src/utils.c	/^int _check_sql_buf(int i) {$/;"	f
+_copy_factor_levels2	src/sqlite_dataframe.c	/^int _copy_factor_levels2(const char *factor_type, const char *iname_src,$/;"	f
+_create_factor_table2	src/sqlite_dataframe.c	/^int _create_factor_table2(const char *iname, const char *factor_type, $/;"	f
+_create_sdf_attribute2	src/sqlite_dataframe.c	/^static int _create_sdf_attribute2(const char *iname) {$/;"	f	file:
+_create_sdf_sexp	src/utils.c	/^SEXP _create_sdf_sexp(const char *iname) {$/;"	f
+_create_sdf_skeleton1	src/sqlite_dataframe.c	/^char *_create_sdf_skeleton1(SEXP name, int *onamelen, int protect) {$/;"	f
+_create_smat_sexp	src/sqlite_matrix.c	/^static SEXP _create_smat_sexp(const char *mat_iname, const char *type, $/;"	f	file:
+_create_svector1	src/sqlite_vector.c	/^char *_create_svector1(SEXP name, const char *type, int * _namelen, int protect) {$/;"	f
+_create_svector_sexp	src/sqlite_vector.c	/^SEXP _create_svector_sexp(const char *iname, const char *tblname,$/;"	f
+_delete_sdf2	src/sqlite_workspace.c	/^void _delete_sdf2(const char *iname) {$/;"	f
+_empty_callback	src/utils.c	/^int _empty_callback(void *data, int ncols, char **rows, char **cols) {$/;"	f
+_expand_buf	src/utils.c	/^R_INLINE void  _expand_buf(int i, int size) {$/;"	f
+_file_exists	src/utils.c	/^int _file_exists(char *filename) {$/;"	f
+_find_free_filename2	src/sqlite_dataframe.c	/^static int _find_free_filename2(char *rname, char *dirname, char **iname, int *namelen, int *file_idx) {$/;"	f	file:
+_fixname	src/utils.c	/^char *_fixname(char *rname) {$/;"	f
+_getListElement	src/utils.c	/^SEXP _getListElement(SEXP list, char *varname) {$/;"	f
+_get_column_type	src/utils.c	/^const char *_get_column_type(const char *class, int type) {$/;"	f
+_get_factor_levels1	src/utils.c	/^int _get_factor_levels1(const char *iname, const char *varname, SEXP var) {$/;"	f
+_get_full_pathname2	src/utils.c	/^char *_get_full_pathname2(char *relpath) {$/;"	f
+_get_r_class	src/utils.c	/^const char *_get_r_class(const char *db, const char *type) {$/;"	f
+_get_row_count2	src/utils.c	/^int _get_row_count2(const char *table, int quote) {$/;"	f
+_get_rownames2	src/utils.c	/^SEXP _get_rownames2(const char *sdf_iname) {$/;"	f
+_get_sdf_detail2	src/sqlite_workspace.c	/^static char* _get_sdf_detail2(char *iname, int what) {$/;"	f	file:
+_get_vector_index_typed_result	src/sqlite_vector.c	/^static int _get_vector_index_typed_result(sqlite3_stmt *stmt, SEXP *ret, int idx_or_len) {$/;"	f	file:
+_init_sqlite_function_accumulator	src/sqlite_vector.c	/^void _init_sqlite_function_accumulator() {$/;"	f
+_is_factor2	src/sqlite_dataframe.c	/^int _is_factor2(const char *iname, const char *factor_type, const char *colname) {$/;"	f
+_is_r_sym	src/utils.c	/^int _is_r_sym(char *sym) {$/;"	f
+_is_sdf2	src/sqlite_workspace.c	/^char * _is_sdf2(char *filename) {$/;"	f
+_is_sqlitedb	src/sqlite_workspace.c	/^sqlite3* _is_sqlitedb(char *filename) {$/;"	f
+_is_workspace	src/sqlite_workspace.c	/^sqlite3* _is_workspace(char *filename) {$/;"	f
+_prepare_attach2	src/utils.c	/^int _prepare_attach2() {$/;"	f
+_r2iname	src/utils.c	/^char *_r2iname(char *rname, char *iname) {$/;"	f
+_sdf_exists2	src/sqlite_workspace.c	/^int _sdf_exists2(char *iname) {$/;"	f
+_set_rownames2	src/sqlite_dataframe.c	/^static void _set_rownames2(SEXP df) {$/;"	f	file:
+_setup_df_sexp1	src/sqlite_dataframe.c	/^static SEXP _setup_df_sexp1(sqlite3_stmt *stmt, const char *iname, $/;"	f	file:
+_shrink_vector	src/utils.c	/^SEXP _shrink_vector(SEXP vec, int len) {$/;"	f
+_sqlite_begin	src/sqlite_dataframe.h	101;"	d
+_sqlite_begin	src/sqlite_dataframe.h	104;"	d
+_sqlite_commit	src/sqlite_dataframe.h	102;"	d
+_sqlite_commit	src/sqlite_dataframe.h	105;"	d
+_sqlite_error	src/sqlite_dataframe.h	98;"	d
+_sqlite_error_check	src/utils.c	/^int _sqlite_error_check(int res, const char *file, int line) {$/;"	f
+_sqlite_exec	src/sqlite_dataframe.h	97;"	d
+_str_tolower	src/utils.c	/^char *_str_tolower(char *out, const char *ref) {$/;"	f
+accumulator	src/sqlite_vector.c	/^    long double accumulator;$/;"	m	struct:accumulator_t	file:
+accumulator_t	src/sqlite_vector.c	/^struct accumulator_t {$/;"	s	file:
+g_accumulator	src/sqlite_vector.c	/^static long double g_accumulator = 0.0; \/* accumulator var for cumsum, cumprod, etc. *\/$/;"	v	file:
+g_narm	src/sqlite_vector.c	/^static int g_narm = 0;             \/* for Summary group *\/$/;"	v	file:
+g_sql_buf	src/sqlite_workspace.c	/^char *g_sql_buf[NBUFS];$/;"	v
+g_sql_buf_sz	src/sqlite_workspace.c	/^int g_sql_buf_sz[NBUFS];$/;"	v
+g_start	src/sqlite_vector.c	/^static int g_start = 0;            \/* flag for start of cummulation *\/$/;"	v	file:
+g_workspace	src/sqlite_workspace.c	/^sqlite3 *g_workspace = NULL;$/;"	v
+sdf_as_matrix	src/sqlite_matrix.c	/^SEXP sdf_as_matrix(SEXP sdf, SEXP name) {$/;"	f
+sdf_attach_sdf	src/sqlite_workspace.c	/^SEXP sdf_attach_sdf(SEXP filename, SEXP internal_name) {$/;"	f
+sdf_create_sdf	src/sqlite_dataframe.c	/^SEXP sdf_create_sdf(SEXP df, SEXP name) {$/;"	f
+sdf_create_smat	src/sqlite_matrix.c	/^SEXP sdf_create_smat(SEXP svec, SEXP dimnames) {$/;"	f
+sdf_detach_sdf	src/sqlite_workspace.c	/^SEXP sdf_detach_sdf(SEXP internal_name) {$/;"	f
+sdf_do_biglm	src/sqlite_biglm.c	/^SEXP sdf_do_biglm(SEXP sdfx, SEXP svecy, SEXP sdfx_dim, SEXP intercept) {$/;"	f
+sdf_do_variable_math	src/sqlite_vector.c	/^SEXP sdf_do_variable_math(SEXP func, SEXP vector, SEXP other_args) {$/;"	f
+sdf_do_variable_op	src/sqlite_vector.c	/^SEXP sdf_do_variable_op(SEXP func, SEXP vector, SEXP op2, SEXP arg_reversed) {$/;"	f
+sdf_do_variable_summary	src/sqlite_vector.c	/^SEXP sdf_do_variable_summary(SEXP func, SEXP vector, SEXP na_rm) {$/;"	f
+sdf_finalize_workspace	src/sqlite_workspace.c	/^SEXP sdf_finalize_workspace() {$/;"	f
+sdf_get_iname	src/sqlite_dataframe.c	/^SEXP sdf_get_iname(SEXP sdf) {$/;"	f
+sdf_get_index	src/sqlite_dataframe.c	/^SEXP sdf_get_index(SEXP sdf, SEXP row, SEXP col, SEXP new_sdf) {$/;"	f
+sdf_get_length	src/sqlite_dataframe.c	/^SEXP sdf_get_length(SEXP sdf) {$/;"	f
+sdf_get_matrix_columns	src/sqlite_matrix.c	/^SEXP sdf_get_matrix_columns(SEXP smat, SEXP cols) {$/;"	f
+sdf_get_names	src/sqlite_dataframe.c	/^SEXP sdf_get_names(SEXP sdf) {$/;"	f
+sdf_get_row_count	src/sqlite_dataframe.c	/^SEXP sdf_get_row_count(SEXP sdf) {$/;"	f
+sdf_get_sdf	src/sqlite_workspace.c	/^SEXP sdf_get_sdf(SEXP name) {    $/;"	f
+sdf_get_variable	src/sqlite_vector.c	/^SEXP sdf_get_variable(SEXP sdf, SEXP name) {$/;"	f
+sdf_get_variable_index	src/sqlite_vector.c	/^SEXP sdf_get_variable_index(SEXP svec, SEXP idx) {$/;"	f
+sdf_get_variable_length	src/sqlite_vector.c	/^SEXP sdf_get_variable_length(SEXP svec) {$/;"	f
+sdf_import_sqlite_table	src/sqlite_external.c	/^SEXP sdf_import_sqlite_table(SEXP _dbfilename, SEXP _tblname, SEXP _sdfiname) {$/;"	f
+sdf_import_table	src/sqlite_dataframe.c	/^SEXP sdf_import_table(SEXP _filename, SEXP _name, SEXP _sep, SEXP _quote, $/;"	f
+sdf_init_workspace	src/sqlite_workspace.c	/^SEXP sdf_init_workspace() {$/;"	f
+sdf_list_sdfs	src/sqlite_workspace.c	/^SEXP sdf_list_sdfs(SEXP pattern) {$/;"	f
+sdf_rbind	src/sqlite_dataframe.c	/^SEXP sdf_rbind(SEXP sdf, SEXP data) {$/;"	f
+sdf_rename_sdf	src/sqlite_workspace.c	/^SEXP sdf_rename_sdf(SEXP sdf, SEXP name) {$/;"	f
+sdf_set_variable_index	src/sqlite_vector.c	/^SEXP sdf_set_variable_index(SEXP svec, SEXP idx, SEXP value) {$/;"	f
+sdf_sort_variable	src/sqlite_vector.c	/^SEXP sdf_sort_variable(SEXP svec, SEXP decreasing) {$/;"	f
+sdf_tempdir	src/sqlite_external.c	/^SEXP sdf_tempdir() {$/;"	f
+sdf_variable_summary	src/sqlite_vector.c	/^SEXP sdf_variable_summary(SEXP svec, SEXP maxsum) {$/;"	f
+started	src/sqlite_vector.c	/^    int started;$/;"	m	struct:accumulator_t	file:
