@@ -1,10 +1,14 @@
-.onLoad <- function(libname, pkgname) .Call("sdf_init_workspace")
+.onLoad <- function(libname, pkgname) {
+    tryCatch({setwd(".SQLiteDF"); setwd("..")}, error=function (e) dir.create(".SQLiteDF"))
+    .Call("sdf_init_workspace")
+}
 
 .onUnload <- function(libpath) {
     .Call("sdf_finalize_workspace")
     library.dynam.unload("SQLiteDF", libpath)
 }
 
+sdf_tempdir <- function() .Call("sdf_tempdir")
 # -------------------------------------------------------------------------
 # workspace functions
 # -------------------------------------------------------------------------
@@ -144,7 +148,7 @@ sdflm <- function(formula, sdf, batch.size=1024) {
     n <- n + batch.size
     while (n[1] < sdf.nrows) {
         if (n[batch.size] > sdf.nrows) n <- n[1]:sdf.nrows
-        res <- update(res, sdf[n,])
+        res <- biglm:::update(res, sdf[n,])
         n <- n + batch.size
     }
     res
@@ -324,7 +328,7 @@ summary.sqlite.vector <- function(object, maxsum=100, digits=max(3, getOption("d
         names(ret) <- c("Length", "Class", "Type")
         class(ret) <- "table"
         ret
-    } else error(paste("not implemented for type ", typeSvec(object), sep=""))
+    } else stop(paste("not implemented for type ", typeSvec(object), sep=""))
 }
 
 mean.sqlite.vector <- function(x, ...) {
@@ -399,6 +403,7 @@ head.sqlite.matrix <- function(x, n=6, ...) {
     if (is.null(ret)) return(invisible(NULL))
     ret <- matrix(ret, n, mdim[2])
     colnames(ret) <- colnames(x)
+    rownames(ret) <- rownames(x)[1:n]
     ret
 }
 print.sqlite.matrix <- function(x, n = 6, ...) {
@@ -412,3 +417,5 @@ print.sqlite.matrix <- function(x, n = 6, ...) {
     print(head(x, n, ...))
     if (xdim[1] > n) cat(" ...\n")
 }
+#"[.sqlite.matrix" <- function(x, row, col) {
+    
