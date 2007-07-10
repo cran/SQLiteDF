@@ -304,6 +304,10 @@ summary.sqlite.data.frame <- function(object, maxsum=7, digits=max(3, getOption(
     if (is.numeric(idx) && all(idx <= 0)) idx <- (1:length(x))[idx]
     .Call("sdf_get_variable_index", x, idx)
 }
+
+"[<-.sqlite.vector" <- function(x, idx, value) {
+    .Call("sdf_set_variable_index", x, idx, value)
+}
 length.sqlite.vector <- function(x) .Call("sdf_get_variable_length", x)
 is.list.sqlite.vector <- function(x) FALSE
 # methods to "coerce" to ordinary vectors
@@ -317,7 +321,7 @@ Math.sqlite.vector <- function(x, ...) {
     if (!any(has.typeSvec(x, "numeric"), has.typeSvec(x, "integer")))
         stop("Non-numeric argument to mathematical function")
     #.Generic
-    other.args <- formals(get(.Generic, mode="function"))[-1]
+    other.args <- formals(args(get(.Generic, mode="function")))[-1]
     extra.args <- list(...)
 
     # "union" of list elements, with values in extra.args taking precedence
@@ -333,6 +337,7 @@ Math.sqlite.vector <- function(x, ...) {
     # as 2nd arg.
     if (length(other.args) > 0) {
         argnames <- names(other.args)
+        
         if (is.call(other.args[[argnames[1]]])) 
             other.args[[argnames[1]]] <- eval(other.args[[argnames[1]]])
         if (length(other.args[[argnames[1]]]) > 1) 
@@ -340,6 +345,7 @@ Math.sqlite.vector <- function(x, ...) {
         if (is.null(other.args[[argnames[1]]]))
             stop(paste("NULL", argnames[1], "is not supported"))
     }
+
     ret <- .Call("sdf_do_variable_math", .Generic, x, other.args)
     if (is.character(ret)) { file.remove(ret); ret <- NULL }
     ret;
