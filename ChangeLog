@@ -1,7 +1,17 @@
+2007-09-30 (0.1.30)
+- fixed for R 2.6.0+ and devel: CHAR_ELT() now returns const char*, removed
+CR in src/Makevars.in
+
+2007-07-11 (0.1.30)
+- fix for changes in formals() in latest R-devel (cannot do formals() directly
+on primitive functions like log(), has to do formals(args(log)) )
+- fixed renameSdf documentation
+
 2007-07-10 (0.1.27-0.1.29)
 - created method _make_row_index(), similar to R that creates an index
 vector, so that methods no longer have to consider the type of passed index
 - added [<-.sqlite.vector, tests for that
+- fix builds for windows, *bsd (mac)
 
 2007-02-18 (0.1.26)
 - updated to sqlite-3.3.13
