@@ -163,23 +163,6 @@ sdfSelect <- function(sdf, select=NULL, where=NULL, limit=NULL, debug=FALSE) {
     
 
 # -------------------------------------------------------------------------
-# overriden primitives
-# -------------------------------------------------------------------------
-ver = paste(R.version$major, R.version$minor[1], sep=".")
-if (ver < "2.4.0") {
-    sort.default <- base::sort 
-    sort <- function(x, ...) UseMethod("sort")
-    formals(sort.default) <- c(formals(sort.default), alist(...=))
-    
-    # to make use of sort()
-    median <- function(x, na.rm=FALSE) as.numeric(quantile(x, 0.5, na.rm=na.rm))
-
-    # to get generic sort
-    environment(quantile.default) <- .GlobalEnv
-}
-
-
-# -------------------------------------------------------------------------
 # biglm stuffs
 # -------------------------------------------------------------------------
 sdflm <- function(formula, sdf, batch.size=1024) {
@@ -211,6 +194,16 @@ sdflm2 <- function(x, y, intercept=TRUE) {
     rval
 }
 
+summary.sdflm <- function(object,...){
+    beta<-coef(object)
+    se<-sqrt(diag(vcov(object)))
+    mat<-cbind(`Coef`=beta, `(95%`=beta-2*se, `CI)`=beta+2*se, `SE`=se,
+               `p`=2*pnorm(abs(beta/se),lower.tail=FALSE))
+    rownames(mat)<-object$names
+    rval<-list(obj=object, mat=mat)
+    class(rval)<-c("summary.sdflm", "summary.biglm")
+    rval
+}
 
 # -------------------------------------------------------------------------
 # S3 methods for sqlite.data.frame
@@ -243,6 +236,11 @@ dimnames.sqlite.data.frame <- function(x) list(row.names(x), names(x))
         if (is.null(row)) return(data.frame())
         return(.Call("sdf_get_index", x, NULL, row, TRUE))
     }
+}
+
+"[<-.sqlite.data.frame" <- function(x, i=NA, j=NA, value) {
+    # nargs either 3 (df[], df[i]) or 4 (df[,], df[i,], df[,j], df[i,j]
+    # value is never missing
 }
 
 as.list.sqlite.data.frame <- function(x, ...) {

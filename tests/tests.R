@@ -28,6 +28,17 @@ compareSdfToDf <- function(sdf, df, with.names=TRUE) {
         if (df[i,j] != sdf[i,j]) stop("Not equal on ", i, ",", j, "\n")
     }}
 
+    # test [.sqlite.data.frame for row.names()
+    names <- row.names(df)
+    for (i in 1:nrows) {
+        x1 <- df[names[i],]
+        x2 <- sdf[names[i],]
+        for (j in 1:ncols) {
+            if (!isTRUE(all.equal(x1[1,j],x2[1,j])))
+                stop(paste("Not equal on ", names[i], ", ", j, " ([.sqlite.data.frame for row names)"))
+        }
+    }
+
     # test [[.sqlite.data.frame (int arg), [.sqlite.vector, 
     # length.sqlite.vector, has.typeSvec
     for (j in 1:ncols) { 

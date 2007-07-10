@@ -280,6 +280,7 @@ SEXP sdf_set_variable_index(SEXP svec, SEXP idx, SEXP value) {
                *varname = SVEC_VARNAME(svec);
     const char *decltype;
     sqlite3_stmt *stmt;
+    char *error_msg = NULL;
 
 
     if (!USE_SDF1(iname, TRUE, FALSE)) return R_NilValue;
@@ -291,7 +292,7 @@ SEXP sdf_set_variable_index(SEXP svec, SEXP idx, SEXP value) {
     if (_sqlite_error(res)) error("cannot complete request");
     sqlite3_step(stmt);
     decltype = sqlite3_column_decltype(stmt, 0);
-    Rprintf("decltype: %s\n", decltype); 
+    //Rprintf("decltype: %s\n", decltype); 
     coltype = _get_r_type(decltype);
     sqlite3_finalize(stmt);
 
@@ -301,6 +302,8 @@ SEXP sdf_set_variable_index(SEXP svec, SEXP idx, SEXP value) {
     /*Rprintf("idx_len: %d\n", idx_len);*/
     index = _make_row_index(idx, &idx_len);
     if (idx_len % val_len != 0) 
+        /* if val_len > idx_len, idx_len % val_len = idx_len > 0 */
+        /* if idx_len > val_len, recycle if idx_len % val_len == 0 */
         warning("number of items to replace is not a multiple of replacement length");
 
     /* find the type of value to be assigned */
@@ -316,7 +319,7 @@ SEXP sdf_set_variable_index(SEXP svec, SEXP idx, SEXP value) {
     if (_sqlite_error(res)) error("cannot complete request");
     /*Rprintf("idx_len: %d\n", idx_len);*/
 
-    Rprintf("coltype: %d\n", coltype);
+    /*Rprintf("coltype: %d\n", coltype);*/
     switch (coltype) {
         case 1010: /* logical <- logical */
         case 1310: /* int <- logical */
@@ -397,29 +400,31 @@ SEXP sdf_set_variable_index(SEXP svec, SEXP idx, SEXP value) {
             }
             break;
         case 1314: /* int <- real */
-            _sqlite_commit;
-            error("cannot promote vector from integer to real");
+            error_msg = "cannot promote vector from integer to real";
+            break;
         case 1014: /* logical <- real */
-            _sqlite_commit;
-            error("cannot promote vector from logical to real");
+            error_msg = "cannot promote vector from logical to real";
+            break;
         case 1013: /* logical <- int */
-            _sqlite_commit;
-            error("cannot promote vector from logical to integer");
+            error_msg = "cannot promote vector from logical to integer";
+            break;
         case 1016: /* logical <- character */
-            _sqlite_commit;
-            error("cannot promote vector from logical to character");
+            error_msg = "cannot promote vector from logical to character";
+            break;
         case 1316: /* integer <- character */
             /* TODO: this could be factors */
-            _sqlite_commit;
-            error("cannot promote vector from integer to character");
+            error_msg = "cannot promote vector from integer to character";
+            break;
         case 1416: /* real <- character */
-            _sqlite_commit;
-            error("cannot promote vector from real to character");
+            error_msg = "cannot promote vector from real to character";
+            break;
         default:
-            _sqlite_commit;
-            error("don't know what to do with coltype=%d", coltype);
+            sprintf(g_sql_buf[0], "don't know what to do with coltype=%d", 
+                    coltype);
+            error_msg = g_sql_buf[0];
     }
     _sqlite_commit;
+    if (error_msg != NULL) error(error_msg);
 
     return svec;
 }
@@ -1235,7 +1240,7 @@ struct accumulator_t {
     int started;
 };
 
-static R_INLINE int __vecmath_checkarg(sqlite3_context *ctx, sqlite3_value *arg, double *value) {
+R_INLINE int __vecmath_checkarg(sqlite3_context *ctx, sqlite3_value *arg, double *value) {
     int ret = 1;
     if (sqlite3_value_type(arg) == SQLITE_NULL) { 
         sqlite3_result_null(ctx); 
