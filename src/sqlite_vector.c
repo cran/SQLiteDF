@@ -1235,7 +1235,7 @@ struct accumulator_t {
     int started;
 };
 
-R_INLINE int __vecmath_checkarg(sqlite3_context *ctx, sqlite3_value *arg, double *value) {
+static R_INLINE int __vecmath_checkarg(sqlite3_context *ctx, sqlite3_value *arg, double *value) {
     int ret = 1;
     if (sqlite3_value_type(arg) == SQLITE_NULL) { 
         sqlite3_result_null(ctx); 

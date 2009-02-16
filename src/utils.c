@@ -58,7 +58,7 @@ int _check_sql_buf(int i) {
     return ret;
 } 
 
-R_INLINE void  _expand_buf(int i, int size) {
+void  _expand_buf(int i, int size) {
     if (size >= g_sql_buf_sz[i]) {
         g_sql_buf_sz[i] *= 2;
         g_sql_buf[i] = Realloc(g_sql_buf[i], g_sql_buf_sz[i], char);
@@ -67,7 +67,7 @@ R_INLINE void  _expand_buf(int i, int size) {
     /* return expanded; */
 }
 
-R_INLINE int _sqlite_error_check(int res, const char *file, int line) {
+ int _sqlite_error_check(int res, const char *file, int line) {
     int ret = FALSE;
     if (res != SQLITE_OK) { 
         Rprintf("SQLITE ERROR (line %d at %s): %s\n", line, file, sqlite3_errmsg(g_workspace));
